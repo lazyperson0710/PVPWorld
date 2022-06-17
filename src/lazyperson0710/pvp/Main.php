@@ -26,15 +26,13 @@ class Main extends PluginBase implements Listener {
         //プレイヤーだけDamageイベントを消したい場合は//を削除してください
         //    return;
         //}
-        switch ($event->getCause()) {
-            if (in_array($entity->getWorld()->getFolderName(), $this->worlds)) {
-                $event->cancel();
-                $damager = $event->getDamager();
-                if ($entity instanceof Player && $damager instanceof Player) {
-                    $damager->sendTip("現在のワールドではDamageを与えることは出来ません");
-                }
+        if (in_array($entity->getWorld()->getFolderName(), $this->worlds)) {
+            $event->cancel();
+            $damager = $event->getDamager();
+            if ($entity instanceof Player && $damager instanceof Player) {
+                $damager->sendTip("現在のワールドではDamageを与えることは出来ません");
             }
-            break;
         }
+
     }
 }
