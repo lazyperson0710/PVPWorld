@@ -1,0 +1,6 @@
+name: PVPWorld
+main: lazyperson0710\pvp\Main
+version: 1.0.0
+api:
+  - 4.0.0
+author: lazyperson0710
