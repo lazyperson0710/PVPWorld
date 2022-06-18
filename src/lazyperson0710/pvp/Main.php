@@ -17,7 +17,7 @@ class Main extends PluginBase implements Listener {
         $config = new Config($this->getDataFolder() . "config.yml", Config::YAML, [
             "pvpを許可するWorld名" => ["world2"]
         ]);
-        $this->worlds = $config->get("pvpを許可するworld名");
+        $this->worlds = $config->get("pvpを許可するWorld名");
     }
 
     public function onDamage(EntityDamageByEntityEvent $event) {
