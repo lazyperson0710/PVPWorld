@@ -15,7 +15,7 @@ class Main extends PluginBase implements Listener {
     public function onEnable(): void {
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
         $this->saveDefaultConfig();
-        $this->worlds = $this->getConfig()->get("pvpを許可するworld名");
+        $this->worlds = $this->getConfig()->get("pvpを許可するWorld名");
     }
 
     public function onDamage(EntityDamageByEntityEvent $event) {
